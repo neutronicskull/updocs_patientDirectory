@@ -11,21 +11,20 @@
     <script type="text/javascript" src="src/app.js"></script>
     <script type="text/javascript" src="src/views/main/mainView.js"></script>
     <script type="text/javascript" src="src/components/dataService/dataService.js"></script>
+    <script type="text/javascript" src="src/components/providerCreateDirective/providerCreateDirective.js"></script>
+    <script type="text/javascript" src="src/components/providerListDirective/providerListDirective.js"></script>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body ng-app="app" ng-controller="MainController">
 
     <header>
+        <h1>Provider Directory</h1>
+        <span>v2.0</span>
     </header>
 
-    <section id="provider_create">
+    <section id="provider_create" provider-create></section>
 
-    </section>
-
-    <section id="provider_list">
-
-    </section>
-
+    <section id="provider_list" provider-data="directoryData" provider-list></section>
 
 </body>
 </html>

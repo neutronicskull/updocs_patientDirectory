@@ -2,15 +2,15 @@
     'use strict';
 
     var app = angular.module('app');
-    app.controller('MainController', ['$scope', 'DataService', function ($scope, DataService) {
+    app.controller('MainController', ['$scope', 'DataService',function ($scope, DataService) {
         // controller for main view
         var vm = this;
 
-        vm.directoryData = {};
+        $scope.directoryData = {};
         DataService.get("providerData").then(function(response) {
-            vm.directoryData = response.data;
+            $scope.directoryData = response.data;
         }, function(response) {
-            console.log("data load faile::"+response.error.message);
+            console.log("data load failed::"+response.error.message);
         });
 
     }]);

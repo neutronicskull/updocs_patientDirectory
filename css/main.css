@@ -6,10 +6,106 @@ body {
     padding: 0;
     margin: 0;
     overflow-x:hidden;
+    background-color:#E2E2E2;
 }
 
-h1 {
-    font-size: 4.6em;
-    font-weight: 300;
-    margin-top: 2rem;
+.error {
+    color:#f00;
+}
+
+.clearFloat{
+    float:none;
+    clear:both;
+    display:block;
+}
+
+header {
+    margin-left:14px;
+}
+
+header h1 {
+    margin-bottom:0;
+}
+
+section {
+    border:4px solid #DCDCDC;
+    background-color:#fff;
+}
+
+#provider_create{
+    width: calc(30% - 58px);
+    height:310px;
+    float:left;
+    margin: 10px;
+    padding:15px;
+}
+
+#provider_create label {
+    display: block;
+    margin-bottom:10px;
+}
+
+#provider_create label span {
+    display: block;
+}
+
+#provider_create label input {
+    width:100%;
+}
+
+#provider_list{
+    width:calc(70% - 58px);
+    padding:15px;
+    float:left;
+    margin: 10px;
+}
+
+#provider_list input[type='checkbox'] {
+    position: absolute;
+    left:-24px;
+    top:17px;
+}
+
+.listHolder {
+    height: 259px;
+    overflow-y: scroll;
+}
+
+.providerWrap {
+    display:inline-block;
+    width:calc(100% - 60px);
+    margin-left:30px;
+    padding:10px 10px;
+    position: relative;
+    background-color: #fff;
+}
+
+.providerWrap.even {
+    background-color:#E2E2E2;
+}
+
+.listItem {
+    display: block;
+}
+
+.listItem span.providerName {
+    float:left;
+    margin-bottom:3px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.listItem span.providerSpecialty {
+    float:right;
+    margin-bottom:3px;
+    font-size:14px;
+}
+
+.listItem span.providerEmail {
+    float:left;
+    clear:both;
+}
+
+.listItem span.providerPractice {
+    float:right;
 }
