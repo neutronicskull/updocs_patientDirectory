@@ -44,10 +44,6 @@
                     }
                 };
 
-                $scope.selectClicked = function(){
-                    console.log("select clicked");
-                };
-
                 function configureSelect(){
                     $scope.selectedOrder = '';
                     $scope.ascendingOrder = false;
