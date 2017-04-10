@@ -34,7 +34,7 @@ section {
 
 #provider_create{
     width: calc(30% - 58px);
-    height:310px;
+    height:320px;
     float:left;
     margin: 10px;
     padding:15px;
@@ -50,7 +50,17 @@ section {
 }
 
 #provider_create label input {
+    margin-top:3px;
     width:100%;
+}
+
+#provider_list .filterWrap {
+    position: absolute;
+    right: 15px;
+    top: 30px;
+}
+#provider_list .filterWrap label {
+    margin-right:15px;
 }
 
 #provider_list{
@@ -58,6 +68,7 @@ section {
     padding:15px;
     float:left;
     margin: 10px;
+    position: relative;
 }
 
 #provider_list input[type='checkbox'] {
@@ -66,14 +77,19 @@ section {
     top:17px;
 }
 
+#provider_list button {
+    float: right;
+    margin: 23px 0 7px;
+}
+
 .listHolder {
-    height: 259px;
+    height: 221px;
     overflow-y: scroll;
 }
 
 .providerWrap {
     display:inline-block;
-    width:calc(100% - 60px);
+    width:calc(100% - 50px);
     margin-left:30px;
     padding:10px 10px;
     position: relative;

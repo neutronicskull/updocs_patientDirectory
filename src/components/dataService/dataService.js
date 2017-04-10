@@ -15,7 +15,7 @@
     app.factory('DataService', ['$q', function($q) {
         var factory = {};
 
-        factory.data = {};
+        factory.data = [];
 
         factory.get = function(location){
             var deferred = $q.defer();
@@ -49,7 +49,12 @@
             var deferred = $q.defer();
 
             // would normally have an xhr here, loading local data instead
-            if (data && typeof data === 'object'){
+            if (data && Array.isArray(data)){
+                for (var i = data.length-1, j = 0; i >= j; i--) {
+                    removeObjectFromArray(factory.data, data[i]);
+                }
+                deferred.resolve({ data:factory.data, error:false });
+            } else if (data && typeof data === 'object'){
                 removeObjectFromArray(factory.data, data);
                 deferred.resolve({ data:factory.data, error:false });
             } else {
